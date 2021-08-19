@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CreateStudent {
 
 
-    static List<Student> students = new ArrayList<>();
+    public static List<Student> students = new ArrayList<>();
 
     public static Object staticStudents() {
         Student student1 = new Student("Ioannis", "Chloptsios", "19/02/1991", 2500);

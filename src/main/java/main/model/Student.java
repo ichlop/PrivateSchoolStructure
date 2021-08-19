@@ -1,13 +1,13 @@
 package main.model;
 
-import java.util.Date;
-
 public class Student {
 
     private String firstName;
     private String lastName;
     private String dateOfBirth;
     private double tuitionFees;
+
+    private Course course;
 
     public Student(String firstName, String lastName, String dateOfBirth, double tuitionFees, Course course) {
         this.firstName = firstName;
@@ -23,8 +23,6 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
         this.tuitionFees = tuitionFees;
     }
-
-    private Course course;
 
 
     public String getFirstName() {
@@ -65,7 +63,7 @@ public class Student {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", tuitionFees=" + tuitionFees  +
+                ", tuitionFees=" + tuitionFees +
                 '}';
     }
 }

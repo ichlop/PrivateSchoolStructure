@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class CreateTrainer {
 
-    static List<Trainer> trainers = new ArrayList<>();
+    public static List<Trainer> trainers = new ArrayList<>();
 
     public static Object staticTrainers() {
         Trainer trainer1 = new Trainer("Giwrgos", "Chalkias");
@@ -19,9 +19,8 @@ public class CreateTrainer {
         return trainers;
     }
 
-
-    Scanner input = new Scanner(System.in);
-    public void trainerCreation() {
+    public static void trainerCreation() {
+        Scanner input = new Scanner(System.in);
 
         System.out.println("Enter trainer's first name:");
         String firstName = input.nextLine();
@@ -32,7 +31,6 @@ public class CreateTrainer {
         trainers.add(new Trainer(firstName, lastName));
 
     }
-
 
 
 }
