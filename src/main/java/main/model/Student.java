@@ -2,6 +2,7 @@ package main.model;
 
 public class Student {
 
+
     private String firstName;
     private String lastName;
     private String dateOfBirth;
@@ -17,13 +18,16 @@ public class Student {
         this.course = course;
     }
 
-    public Student(String firstName, String lastName, String dateOfBirth, double tuitionFees) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
-        this.tuitionFees = tuitionFees;
+    public Student(String firstName, String lastName, String dateOfBirth, int tuitionFees, String stream) {
     }
 
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
+    }
 
     public String getFirstName() {
         return firstName;

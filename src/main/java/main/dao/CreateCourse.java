@@ -1,6 +1,5 @@
 package main.dao;
 
-import main.model.Assignment;
 import main.model.Course;
 import main.model.CourseType;
 
