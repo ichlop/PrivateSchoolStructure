@@ -11,3 +11,7 @@ public class PrivateSchool {
     }
 
 }
+
+//todo: make the last case to work
+//todo: connect trainers with courses
+//todo: connect courses with assignments
