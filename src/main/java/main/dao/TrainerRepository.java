@@ -1,16 +1,17 @@
 package main.dao;
 
 import main.model.Trainer;
+import main.services.TrainerPerCourse;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CreateTrainer {
+public class TrainerRepository {
 
     public static List<Trainer> trainers = new ArrayList<>();
 
-    public static Object staticTrainers() {
+    public static List<Trainer> createTrainers() {
         Trainer trainer1 = new Trainer("Giwrgos", "Chalkias");
         Trainer trainer2 = new Trainer("Vaggelis", "Aristopoulos");
         trainers.add(trainer1);
@@ -30,7 +31,8 @@ public class CreateTrainer {
 
         trainers.add(new Trainer(firstName, lastName));
 
-    }
+        TrainerPerCourse.splitCourse(firstName,lastName);
 
+    }
 
 }

@@ -1,32 +1,20 @@
 package main.model;
 
-public class Student {
-
+public class Student{
 
     private String firstName;
     private String lastName;
     private String dateOfBirth;
     private double tuitionFees;
 
-    private Course course;
-
-    public Student(String firstName, String lastName, String dateOfBirth, double tuitionFees, Course course) {
+    public Student(String firstName, String lastName, String dateOfBirth, double tuitionFees) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.tuitionFees = tuitionFees;
-        this.course = course;
     }
 
-    public Student(String firstName, String lastName, String dateOfBirth, int tuitionFees, String stream) {
-    }
-
-    public Course getCourse() {
-        return course;
-    }
-
-    public void setCourse(Course course) {
-        this.course = course;
+    public Student() {
     }
 
     public String getFirstName() {
@@ -63,7 +51,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "\nStudent{" +
+        return "Student{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +

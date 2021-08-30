@@ -17,6 +17,14 @@ public class Assignment {
         this.totalMark = totalMark;
     }
 
+    public Assignment() {
+    }
+
+    public Assignment(String title, String subDateTime) {
+        this.title = title;
+        this.subDateTime = subDateTime;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -59,7 +67,7 @@ public class Assignment {
 
     @Override
     public String toString() {
-        return "\nAssignment{" +
+        return "\n Assignment{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", subDateTime='" + subDateTime + '\'' +

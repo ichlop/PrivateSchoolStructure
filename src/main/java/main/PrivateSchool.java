@@ -2,9 +2,11 @@ package main;
 
 import main.menu.Menu;
 
+import java.text.ParseException;
+
 public class PrivateSchool {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
         Menu.mainMenu();
 
@@ -12,6 +14,7 @@ public class PrivateSchool {
 
 }
 
-//todo: make the last case to work
-//todo: connect trainers with courses
-//todo: connect courses with assignments
+//todo: connect students with courses from StudentPerCourse.splitCourse();
+//todo: also from trainers
+//todo: connect students-courses-assignments
+//todo: for each date who has to submit assignments

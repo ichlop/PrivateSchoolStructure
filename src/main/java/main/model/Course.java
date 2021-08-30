@@ -1,23 +1,55 @@
 package main.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Course {
 
     private String title;
     private String stream;
     private CourseType type;
-    private String start_date;
-    private String end_date;
+    private String startDate;
+    private String endDate;
 
-    private Trainer trainer;
-    private Student student;
-    private Assignment assignment;
+    private List<Student> students;
+    private List<Trainer> trainers;
 
-    public Course(String title, String stream, CourseType type, String start_date, String end_date) {
+    public Course(String title, String stream, CourseType type, String startDate, String endDate) {
         this.title = title;
         this.stream = stream;
         this.type = type;
-        this.start_date = start_date;
-        this.end_date = end_date;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.students = new ArrayList<>();
+        this.trainers = new ArrayList<>();
+    }
+
+    public Course(String title, String stream, CourseType type, String startDate, String endDate, List<Student> students) {
+        this.title = title;
+        this.stream = stream;
+        this.type = type;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.students = students;
+    }
+
+    public List<Trainer> getTrainers() {
+        return trainers;
+    }
+
+    public void setTrainers(List<Trainer> trainers) {
+        this.trainers = trainers;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<Student> students) {
+        this.students = students;
+    }
+
+    public Course() {
     }
 
     public String getTitle() {
@@ -44,19 +76,32 @@ public class Course {
         this.type = type;
     }
 
-    public String getStart_date() {
-        return start_date;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setStart_date(String start_date) {
-        this.start_date = start_date;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 
-    public String getEnd_date() {
-        return end_date;
+    public String getEndDate() {
+        return endDate;
     }
 
-    public void setEnd_date(String end_date) {
-        this.end_date = end_date;
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "title='" + title + '\'' +
+                ", stream='" + stream + '\'' +
+                ", type=" + type +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                ", students=" + students +
+                ", trainers=" + trainers +
+                '}';
     }
 }
