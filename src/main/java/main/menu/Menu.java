@@ -23,6 +23,8 @@ public class Menu {
 
         while (true) {
 
+            System.out.println();
+            System.out.println();
             System.out.println("-----------------------------");
             System.out.println("This is a Private School menu");
             System.out.println("-----------------------------");
@@ -35,7 +37,6 @@ public class Menu {
 
             Scanner sc = new Scanner(System.in);
             int choice = sc.nextInt();
-
 
             switch (choice) {
                 case 1:

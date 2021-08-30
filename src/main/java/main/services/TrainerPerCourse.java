@@ -28,7 +28,5 @@ public class TrainerPerCourse {
                 dbTrainers.add(new Trainer(firstName, lastName));
             }
         }
-
     }
-
 }

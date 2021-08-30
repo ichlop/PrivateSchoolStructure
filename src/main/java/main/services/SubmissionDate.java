@@ -1,11 +1,14 @@
 package main.services;
 
 
+import main.model.Student;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+import static main.dao.StudentRepository.students;
 
 public class SubmissionDate {
 
@@ -26,20 +29,20 @@ public class SubmissionDate {
 
     }
 
-//    public static void dateToSubmit() throws ParseException {
-//
-//        SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd");
-//        Date date = convertDate();
-//        for (Student student : students) {
-//            Date studentDateSubmission = sdformat.parse(student.getCourse().getSubDateTime());
-//            if (studentDateSubmission.compareTo(date)) {
-//                continue;
-//            }
-//            continue;
-//
-//
-//        }
+    public static void dateToSubmit() throws ParseException {
 
-//    }
+        SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = convertDate();
+        for (Student student : students) {
+            Date studentDateSubmission = sdformat.parse(student.);
+            if (studentDateSubmission.compareTo(date)) {
+                continue;
+            }
+            continue;
+
+
+        }
+
+    }
 
 }
