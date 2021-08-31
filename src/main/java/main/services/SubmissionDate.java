@@ -33,15 +33,15 @@ public class SubmissionDate {
 
         SimpleDateFormat sdformat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = convertDate();
-        for (Student student : students) {
-            Date studentDateSubmission = sdformat.parse(student.);
-            if (studentDateSubmission.compareTo(date)) {
-                continue;
-            }
-            continue;
-
-
-        }
+//        for (Student student : students) {
+//            Date studentDateSubmission = sdformat.parse(student.);
+//            if (studentDateSubmission.compareTo(date)) {
+//                continue;
+//            }
+//            continue;
+//
+//
+//        }
 
     }
 

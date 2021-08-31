@@ -14,7 +14,5 @@ public class PrivateSchool {
 
 }
 
-//todo: connect students with courses from StudentPerCourse.splitCourse();
-//todo: also from trainers
 //todo: connect students-courses-assignments
 //todo: for each date who has to submit assignments

@@ -1,5 +1,7 @@
 package main.model;
 
+import java.util.Objects;
+
 public class Trainer {
 
     private String firstName;
@@ -34,5 +36,18 @@ public class Trainer {
                 ", lastName='" + lastName + '\'' +
                 ", subject='" + subject + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Trainer trainer = (Trainer) o;
+        return firstName.equals(trainer.firstName) && lastName.equals(trainer.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName);
     }
 }

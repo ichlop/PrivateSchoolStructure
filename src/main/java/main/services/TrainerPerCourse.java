@@ -17,14 +17,14 @@ public class TrainerPerCourse {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Choose the courses that the student will join with comma seperated (like this: a, b, c)");
+        System.out.println("Choose the courses that the trainer will join with comma seperated (like this: a, b)");
         String courseTile = input.nextLine();
-        List<String> TrainerPerCourseList = Stream.of(courseTile.split(",", -1)).collect(Collectors.toList());
+        List<String> trainerPerCourseList = Stream.of(courseTile.split(",", -1)).collect(Collectors.toList());
 
-        for (int i=0; i< TrainerPerCourseList.size(); i++){
-            if (TrainerPerCourseList.get(i) == "Java") {
+        for (String str : trainerPerCourseList){
+            if (str.equals("OOP") || str.equals("oop")) {
                 oopTrainers.add(new Trainer(firstName, lastName));
-            } else if (TrainerPerCourseList.get(i) == "C#") {
+            } else if (str.equals("DB") || str.equals("db")) {
                 dbTrainers.add(new Trainer(firstName, lastName));
             }
         }

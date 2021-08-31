@@ -1,33 +1,35 @@
 package main.dao;
 
+import main.dao.implement.DaoRepository;
+import main.model.Student;
 import main.model.Trainer;
 import main.services.TrainerPerCourse;
+import main.services.Validations;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class TrainerRepository {
+public class TrainerRepository implements DaoRepository {
 
     public static List<Trainer> trainers = new ArrayList<>();
 
-    public static List<Trainer> createTrainers() {
-        Trainer trainer1 = new Trainer("Giwrgos", "Chalkias");
-        Trainer trainer2 = new Trainer("Vaggelis", "Aristopoulos");
-        trainers.add(trainer1);
-        trainers.add(trainer2);
-
+    @Override
+    public List<Trainer> createPerson() {
         return trainers;
     }
 
-    public static void trainerCreation() {
+    @Override
+    public void personCreation() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter trainer's first name:");
-        String firstName = input.nextLine();
+        String firstName = null;
+        firstName = Validations.nameValidation(firstName, input);
 
         System.out.println("Enter trainer's last name:");
-        String lastName = input.nextLine();
+        String lastName = null;
+        lastName = Validations.nameValidation(lastName, input);
 
         trainers.add(new Trainer(firstName, lastName));
 
@@ -35,4 +37,14 @@ public class TrainerRepository {
 
     }
 
+    @Override
+    public void deletePerson() {
+        System.out.println("Give the firstname and the last name of the trainer you want to delete");
+
+        Scanner sc = new Scanner(System.in);
+        String fname = sc.nextLine();
+        String lname = sc.nextLine();
+
+        trainers.remove(new Student(fname,lname));
+    }
 }
