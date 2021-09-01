@@ -21,7 +21,7 @@ public class TrainerPerCourse {
         String courseTile = input.nextLine();
         List<String> trainerPerCourseList = Stream.of(courseTile.split(",", -1)).collect(Collectors.toList());
 
-        for (String str : trainerPerCourseList){
+        for (String str : trainerPerCourseList) {
             if (str.equals("OOP") || str.equals("oop")) {
                 oopTrainers.add(new Trainer(firstName, lastName));
             } else if (str.equals("DB") || str.equals("db")) {

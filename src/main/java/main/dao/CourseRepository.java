@@ -2,7 +2,6 @@ package main.dao;
 
 import main.model.Course;
 import main.model.CourseType;
-import main.model.Trainer;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -4,9 +4,7 @@ import main.dao.AssignmentRepository;
 import main.dao.CourseRepository;
 import main.dao.StudentRepository;
 import main.dao.TrainerRepository;
-import main.model.Course;
 
-import java.text.ParseException;
 import java.util.Scanner;
 
 import static main.dao.AssignmentRepository.assignments;

@@ -2,17 +2,11 @@ package main;
 
 import main.menu.Menu;
 
-import java.text.ParseException;
-
 public class PrivateSchool {
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
 
         Menu.mainMenu();
 
     }
-
 }
-
-//todo: connect students-courses-assignments
-//todo: for each date who has to submit assignments

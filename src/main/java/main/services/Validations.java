@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Validations {
 
 
-    public static int feeValidation (int tuition, Scanner input) {
+    public static int feeValidation(int tuition, Scanner input) {
         do {
             while (!input.hasNextInt()) {
                 System.out.println("That's not a valid number!");
@@ -16,7 +16,7 @@ public class Validations {
         } while (tuition <= 0 || tuition > 4000);
     }
 
-    public static void dateValidation (String date, Scanner input) {
+    public static void dateValidation(String date, Scanner input) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         boolean vd = true;

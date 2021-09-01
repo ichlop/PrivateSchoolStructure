@@ -71,7 +71,7 @@ public class Student {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Student student = (Student) o;
-        return  firstName.equals(student.firstName) && lastName.equals(student.lastName);
+        return firstName.equals(student.firstName) && lastName.equals(student.lastName);
     }
 
     @Override

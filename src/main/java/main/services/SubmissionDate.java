@@ -1,14 +1,10 @@
 package main.services;
 
 
-import main.model.Student;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-
-import static main.dao.StudentRepository.students;
 
 public class SubmissionDate {
 

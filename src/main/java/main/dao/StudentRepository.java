@@ -5,7 +5,6 @@ import main.model.Student;
 import main.services.StudentPerCourse;
 import main.services.Validations;
 
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -25,7 +24,7 @@ public class StudentRepository implements DaoRepository {
     }
 
     @Override
-    public void personCreation(){
+    public void personCreation() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter student's first name:");
@@ -58,6 +57,6 @@ public class StudentRepository implements DaoRepository {
         String fname = sc.nextLine();
         String lname = sc.nextLine();
 
-        students.remove(new Student(fname,lname));
+        students.remove(new Student(fname, lname));
     }
 }

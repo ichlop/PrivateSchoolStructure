@@ -94,7 +94,7 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
+        return "\n Course{" +
                 "title='" + title + '\'' +
                 ", stream='" + stream + '\'' +
                 ", type=" + type +

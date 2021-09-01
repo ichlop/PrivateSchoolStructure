@@ -16,6 +16,11 @@ public class TrainerRepository implements DaoRepository {
 
     @Override
     public List<Trainer> createPerson() {
+        Trainer trainer1 = new Trainer("Giorgos", "Chalkias");
+        Trainer trainer2 = new Trainer("Giannis", "Antetokoumbo");
+        trainers.add(trainer1);
+        trainers.add(trainer2);
+
         return trainers;
     }
 
@@ -33,7 +38,7 @@ public class TrainerRepository implements DaoRepository {
 
         trainers.add(new Trainer(firstName, lastName));
 
-        TrainerPerCourse.splitCourse(firstName,lastName);
+        TrainerPerCourse.splitCourse(firstName, lastName);
 
     }
 
@@ -45,6 +50,6 @@ public class TrainerRepository implements DaoRepository {
         String fname = sc.nextLine();
         String lname = sc.nextLine();
 
-        trainers.remove(new Student(fname,lname));
+        trainers.remove(new Student(fname, lname));
     }
 }
