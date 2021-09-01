@@ -19,13 +19,13 @@ public class Menu {
 
     public static void mainMenu() {
         StudentRepository sr = new StudentRepository();
-        sr.createPerson();
+        sr.createSomething();
         TrainerRepository tr = new TrainerRepository();
-        tr.createPerson();
+        tr.createSomething();
         AssignmentRepository ar = new AssignmentRepository();
-        ar.assignmentCreation();
+        ar.createSomething();
         CourseRepository cr = new CourseRepository();
-        cr.createCourses();
+        cr.createSomething();
 
         boolean prog = true;
 
@@ -52,18 +52,18 @@ public class Menu {
             switch (choice) {
                 case 1:
 
-                    sr.personCreation();
+                    sr.somethingCreation();
                     break;
                 case 2:
 
-                    sr.deletePerson();
+                    sr.deleteSomething();
                     break;
                 case 3:
-                    tr.personCreation();
+                    tr.somethingCreation();
 
                     break;
                 case 4:
-                    tr.deletePerson();
+                    tr.deleteSomething();
                     break;
                 case 5:
                     System.out.println(

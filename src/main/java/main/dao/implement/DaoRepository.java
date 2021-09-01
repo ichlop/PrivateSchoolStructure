@@ -4,11 +4,11 @@ import java.util.List;
 
 public interface DaoRepository<T> {
 
-    default List<T> createPerson() {
+    default List<T> createSomething() {
         return null;
     }
 
-    void personCreation();
+    void somethingCreation();
 
-    void deletePerson();
+    void deleteSomething();
 }

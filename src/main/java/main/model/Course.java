@@ -13,6 +13,16 @@ public class Course {
 
     private List<Student> students;
     private List<Trainer> trainers;
+    private List<Assignment> assignments;
+
+    public Course(String title, String stream, CourseType type, String startDate, String endDate,  List<Assignment> assignments) {
+        this.title = title;
+        this.stream = stream;
+        this.type = type;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.assignments = assignments;
+    }
 
     public Course(String title, String stream, CourseType type, String startDate, String endDate) {
         this.title = title;
@@ -24,13 +34,12 @@ public class Course {
         this.trainers = new ArrayList<>();
     }
 
-    public Course(String title, String stream, CourseType type, String startDate, String endDate, List<Student> students) {
-        this.title = title;
-        this.stream = stream;
-        this.type = type;
-        this.startDate = startDate;
-        this.endDate = endDate;
-        this.students = students;
+    public List<Assignment> getAssignments() {
+        return assignments;
+    }
+
+    public void setAssignments(List<Assignment> assignments) {
+        this.assignments = assignments;
     }
 
     public List<Trainer> getTrainers() {
@@ -102,6 +111,7 @@ public class Course {
                 ", endDate='" + endDate + '\'' +
                 ", students=" + students +
                 ", trainers=" + trainers +
+                ", assignments=" + assignments +
                 '}';
     }
 }

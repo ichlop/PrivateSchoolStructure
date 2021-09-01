@@ -16,6 +16,16 @@ public class Validations {
         } while (tuition <= 0 || tuition > 4000);
     }
 
+    public static double oralValidation(double mark, Scanner input) {
+        do {
+            while (!input.hasNextInt()) {
+                System.out.println("That's not a valid number!");
+                input.next();
+            }
+            return mark = input.nextInt();
+        } while (mark < 0.0 || mark > 10);
+    }
+
     public static void dateValidation(String date, Scanner input) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -31,7 +41,7 @@ public class Validations {
         }
     }
 
-    public static String nameValidation(String name, Scanner input) {
+    public static String stringValidation(String name, Scanner input) {
 
         while (!input.hasNext("[A-Za-z]*")) {
             System.out.println("Please Enter a Valid name:");

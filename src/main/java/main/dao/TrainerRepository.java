@@ -15,7 +15,7 @@ public class TrainerRepository implements DaoRepository {
     public static List<Trainer> trainers = new ArrayList<>();
 
     @Override
-    public List<Trainer> createPerson() {
+    public List<Trainer> createSomething() {
         Trainer trainer1 = new Trainer("Giorgos", "Chalkias");
         Trainer trainer2 = new Trainer("Giannis", "Antetokoumbo");
         trainers.add(trainer1);
@@ -25,16 +25,16 @@ public class TrainerRepository implements DaoRepository {
     }
 
     @Override
-    public void personCreation() {
+    public void somethingCreation() {
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter trainer's first name:");
         String firstName = null;
-        firstName = Validations.nameValidation(firstName, input);
+        firstName = Validations.stringValidation(firstName, input);
 
         System.out.println("Enter trainer's last name:");
         String lastName = null;
-        lastName = Validations.nameValidation(lastName, input);
+        lastName = Validations.stringValidation(lastName, input);
 
         trainers.add(new Trainer(firstName, lastName));
 
@@ -43,7 +43,7 @@ public class TrainerRepository implements DaoRepository {
     }
 
     @Override
-    public void deletePerson() {
+    public void deleteSomething() {
         System.out.println("Give the firstname and the last name of the trainer you want to delete");
 
         Scanner sc = new Scanner(System.in);

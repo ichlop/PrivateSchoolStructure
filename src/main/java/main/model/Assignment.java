@@ -4,14 +4,14 @@ public class Assignment {
 
     private String title;
     private String description;
-    private String subDateTime;
+    private String subDate;
     private double oralMark;
     private double totalMark;
 
-    public Assignment(String title, String description, String subDateTime, double oralMark, double totalMark) {
+    public Assignment(String title, String description, String subDate, double oralMark, double totalMark) {
         this.title = title;
         this.description = description;
-        this.subDateTime = subDateTime;
+        this.subDate = subDate;
         this.oralMark = oralMark;
         this.totalMark = totalMark;
     }
@@ -21,7 +21,7 @@ public class Assignment {
 
     public Assignment(String title, String subDateTime) {
         this.title = title;
-        this.subDateTime = subDateTime;
+        this.subDate = subDateTime;
     }
 
     public String getTitle() {
@@ -41,11 +41,11 @@ public class Assignment {
     }
 
     public String getSubDateTime() {
-        return subDateTime;
+        return subDate;
     }
 
     public void setSubDateTime(String subDateTime) {
-        this.subDateTime = subDateTime;
+        this.subDate = subDate;
     }
 
     public double getOralMark() {
@@ -69,7 +69,7 @@ public class Assignment {
         return "\n Assignment{" +
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
-                ", subDateTime='" + subDateTime + '\'' +
+                ", subDate='" + subDate + '\'' +
                 ", oralMark=" + oralMark +
                 ", totalMark=" + totalMark +
                 '}';

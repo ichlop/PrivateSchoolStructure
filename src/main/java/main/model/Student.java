@@ -12,6 +12,14 @@ public class Student {
 
     private List<Assignment> assignments;
 
+    public Student(String firstName, String lastName, String dateOfBirth, double tuitionFees, List<Assignment> assignments) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.tuitionFees = tuitionFees;
+        this.assignments = assignments;
+    }
+
     public Student(String firstName, String lastName, String dateOfBirth, double tuitionFees) {
         this.firstName = firstName;
         this.lastName = lastName;
