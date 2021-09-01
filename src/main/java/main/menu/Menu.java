@@ -12,6 +12,8 @@ import static main.dao.CourseRepository.courses;
 import static main.dao.StudentRepository.students;
 import static main.dao.TrainerRepository.trainers;
 import static main.services.StudentPerCourse.*;
+import static main.services.TrainerPerCourse.dbTrainers;
+import static main.services.TrainerPerCourse.oopTrainers;
 
 public class Menu {
 
@@ -41,7 +43,7 @@ public class Menu {
                             "Type '4' to delete a new trainer \n" +
                             "Type '5' to choose what list you want to see \n" +
                             "Type '6' to see the students for each course\n" +
-                            "Type '7' and type the date to see students that owe submissions\n" +
+                            "Type '7' to see the trainers for each course\n" +
                             "Type '8' to exit");
 
             Scanner sc = new Scanner(System.in);
@@ -95,14 +97,28 @@ public class Menu {
                     break;
                 case 6:
                     System.out.println(
+                            "For OOP's trainer list type '1' \n" +
+                                    "For DB's trainer list type '2'");
+                    int studentPerCourseList = sc.nextInt();
+                    switch (studentPerCourseList) {
+                        case 1:
+                            System.out.println(oopTrainers);
+                            break;
+                        case 2:
+                            System.out.println(dbTrainers);
+                            break;
+                    }
+                    break;
+                case 7:
+                    System.out.println(
                             "For Java's list type '1' \n" +
                                     "For C#'s list type '2' \n" +
                                     "For SQL's list type '3' \n" +
                                     "For Python's list type '4' ");
-                    int studentPerCourseList = sc.nextInt();
-                    switch (studentPerCourseList) {
+                    int trainerPerCourseList = sc.nextInt();
+                    switch (trainerPerCourseList) {
                         case 1:
-                            System.out.println(javaStudents);
+                            System.out.println();
                             break;
                         case 2:
                             System.out.println(cSharpStudents);
@@ -114,9 +130,6 @@ public class Menu {
                             System.out.println(pythonStudents);
                             break;
                     }
-                    break;
-                case 7:
-
                     break;
                 case 8:
                     prog = false;

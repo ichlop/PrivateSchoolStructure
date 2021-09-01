@@ -1,5 +1,6 @@
 package main.model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Student {
@@ -9,14 +10,13 @@ public class Student {
     private String dateOfBirth;
     private double tuitionFees;
 
+    private List<Assignment> assignments;
+
     public Student(String firstName, String lastName, String dateOfBirth, double tuitionFees) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
         this.tuitionFees = tuitionFees;
-    }
-
-    public Student() {
     }
 
     public Student(String firstName, String lastName) {
